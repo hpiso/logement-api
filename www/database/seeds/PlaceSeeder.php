@@ -21,6 +21,7 @@ class PlaceSeeder extends Seeder
                 'thumbnail' => $faker->imageUrl(1800, 560),
                 'address' => $faker->streetAddress,
                 'city' => $faker->city,
+                'price' => $faker->numberBetween(1, 100),
                 'postal_code' => $faker->postcode,
                 'latitude' => $faker->latitude,
                 'longitude' => $faker->longitude,

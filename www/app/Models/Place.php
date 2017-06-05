@@ -17,6 +17,7 @@ class Place extends Model
         'longitude',
         'owner_email',
         'owner_name',
+        'price',
     ];
 
     protected $table = 'places';
