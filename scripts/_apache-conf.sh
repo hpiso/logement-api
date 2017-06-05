@@ -7,11 +7,9 @@ block="
 
     DocumentRoot $2
     <Directory $2>
-         DirectoryIndex index.php
-         AllowOverride All
-         Require all granted
-         Order allow,deny
-         Allow from all
+        DirectoryIndex index.php
+        AllowOverride All
+        Require all granted
     </Directory>
 </VirtualHost>
 "
