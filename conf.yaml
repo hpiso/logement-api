@@ -1,0 +1,27 @@
+---
+boxName: logement-api
+ip: "192.168.7.30"
+memory: 1024
+cpus: 2
+
+authorize:
+    - ~/.ssh/id_rsa.pub
+    - ~/.ssh/id_dsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+    - ~/.ssh/id_dsa
+
+networking:
+    - public: true
+
+folders:
+#    - map: example-folder
+#      to: /path/in/vagrant/example-folder
+
+sites:
+    - hostname: logement-api.app
+      to: /vagrant/www/public
+
+databases:
+    - logement_api

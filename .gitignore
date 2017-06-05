@@ -1,0 +1,10 @@
+www/web/bundles/
+www/app/config/parameters.yml
+www/vendor/
+www/var/
+www/app/bootstrap.php.cache
+www/node_modules/
+.idea
+.vagrant
+www/web/css
+www/web/js
