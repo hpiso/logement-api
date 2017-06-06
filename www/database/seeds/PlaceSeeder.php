@@ -16,12 +16,12 @@ class PlaceSeeder extends Seeder
 
         foreach (range(1,20) as $index) {
             $place = Place::create([
-                'title' => $faker->sentence(rand(4, 10), true),
+                'title' => $faker->sentence(rand(1, 2), true),
                 'description' => $faker->text,
-                'thumbnail' => $faker->imageUrl(1800, 560),
+                'thumbnail' => $faker->imageUrl(350, 250),
                 'address' => $faker->streetAddress,
                 'city' => $faker->city,
-                'price' => $faker->numberBetween(1, 100),
+                'price' => $faker->numberBetween(400, 1000),
                 'postal_code' => $faker->postcode,
                 'latitude' => $faker->latitude,
                 'longitude' => $faker->longitude,
