@@ -15,6 +15,7 @@ class CreatePlacesTable extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('title');
             $table->integer('price');
             $table->string('description');
@@ -22,8 +23,6 @@ class CreatePlacesTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('postal_code');
-            $table->string('owner_name');
-            $table->string('owner_email');
             $table->string('latitude');
             $table->string('longitude');
             $table->timestamps();

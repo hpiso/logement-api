@@ -15,12 +15,12 @@ class PlaceRepository
 
     public function index()
     {
-        return $this->place->all();
+        return $this->place->with('user')->get();
     }
 
     public function find($id)
     {
-        return $this->place->findOrFail($id);
+        return $this->place->with('user')->findOrFail($id);
     }
 
 

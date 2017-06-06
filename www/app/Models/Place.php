@@ -22,4 +22,9 @@ class Place extends Model
 
     protected $table = 'places';
     public $timestamps = true;
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
 }
