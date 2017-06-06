@@ -17,6 +17,7 @@ class PlaceSeeder extends Seeder
         $user = App\User::where('name', 'admin')->first();
 
         foreach (range(1,20) as $index) {
+
             $place = Place::create([
                 'title' => $faker->sentence(rand(1, 2), true),
                 'description' => $faker->text,
@@ -25,8 +26,8 @@ class PlaceSeeder extends Seeder
                 'city' => $faker->city,
                 'price' => $faker->numberBetween(400, 1000),
                 'postal_code' => $faker->postcode,
-                'latitude' => $faker->latitude,
-                'longitude' => $faker->longitude,
+                'latitude' => rand(480000, 485000) / 10000,
+                'longitude' => rand(-710000, -723000) / 10000,
                 'user_id' => $user->id
             ]);
         }
