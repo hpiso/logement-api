@@ -14,9 +14,9 @@ class PlaceController extends Controller
         $this->places = $placeRepository;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json($this->places->index());
+        return response()->json($this->places->index($request->input()));
     }
 
     public function show($id)
