@@ -18,9 +18,9 @@ class PlaceRepository
     {
         $query = Place::query();
 
-        if (array_key_exists('radius', $filters) &&
-            array_key_exists('lat', $filters) &&
-            array_key_exists('long', $filters)) {
+        if (isset($filters['radius']) && $filters['radius'] != '' &&
+            isset($filters['lat']) && $filters['lat'] != '' &&
+            isset($filters['long']) && $filters['long'] != '') {
 
 
             $query->selectRaw('*, ( 3959 * acos( cos( radians(' . $filters['lat'] . ') ) * cos( radians( latitude ) ) * cos( radians( longitude )
