@@ -49,5 +49,20 @@ class PlaceRepository
         return $this->place;
     }
 
+    public function update($params, $id)
+    {
+        $place = $this->place->find($id);
+
+        $place->fill($params);
+        $place->save();
+
+        return $place;
+    }
+
+    public function delete($id)
+    {
+        $this->place->findOrFail($id)->delete();
+    }
+
 
 }

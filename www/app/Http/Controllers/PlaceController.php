@@ -28,4 +28,14 @@ class PlaceController extends Controller
     {
         return response()->json($this->places->save($request->input()));
     }
+
+    public function update(Request $request, $id)
+    {
+        return response()->json($this->places->update($request->input(), $id));
+    }
+
+    public function destroy($id)
+    {
+        return response()->json($this->places->delete($id));
+    }
 }
