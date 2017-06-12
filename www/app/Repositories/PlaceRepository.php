@@ -63,6 +63,4 @@ class PlaceRepository
     {
         $this->place->findOrFail($id)->delete();
     }
-
-
 }
