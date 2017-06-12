@@ -23,4 +23,9 @@ class PlaceController extends Controller
     {
         return response()->json($this->places->find($id));
     }
+
+    public function store(Request $request)
+    {
+        return response()->json($this->places->save($request->input()));
+    }
 }

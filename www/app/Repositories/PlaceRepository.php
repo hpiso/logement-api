@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Place;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PlaceRepository
@@ -35,6 +36,17 @@ class PlaceRepository
     public function find($id)
     {
         return $this->place->with('user')->findOrFail($id);
+    }
+
+    public function save($params)
+    {
+        $user = User::where('name', 'admin')->first();
+
+        $this->place->fill($params);
+        $this->place->user()->associate($user);
+        $this->place->save();
+
+        return $this->place;
     }
 
 

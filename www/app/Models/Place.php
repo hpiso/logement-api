@@ -15,8 +15,6 @@ class Place extends Model
         'postal_code',
         'latitude',
         'longitude',
-        'owner_email',
-        'owner_name',
         'price',
     ];
 
